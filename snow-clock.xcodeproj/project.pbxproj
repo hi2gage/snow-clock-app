@@ -14,6 +14,9 @@
 		1C0D9091275F59C400639CE8 /* snow_clockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D9090275F59C400639CE8 /* snow_clockTests.swift */; };
 		1C0D909B275F59C400639CE8 /* snow_clockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D909A275F59C400639CE8 /* snow_clockUITests.swift */; };
 		1C0D909D275F59C400639CE8 /* snow_clockUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0D909C275F59C400639CE8 /* snow_clockUITestsLaunchTests.swift */; };
+		1C1D811A28CAFFF500B68A09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C1D811928CAFFF500B68A09 /* GoogleService-Info.plist */; };
+		1C1D811D28CB03C400B68A09 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1C1D811C28CB03C400B68A09 /* FirebaseAuth */; };
+		1C1D811F28CB03C400B68A09 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1C1D811E28CB03C400B68A09 /* FirebaseFirestoreSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 		1C0D9096275F59C400639CE8 /* snow-clockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "snow-clockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0D909A275F59C400639CE8 /* snow_clockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snow_clockUITests.swift; sourceTree = "<group>"; };
 		1C0D909C275F59C400639CE8 /* snow_clockUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snow_clockUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1C1D811928CAFFF500B68A09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1D811D28CB03C400B68A09 /* FirebaseAuth in Frameworks */,
+				1C1D811F28CB03C400B68A09 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +100,7 @@
 		1C0D907E275F59C100639CE8 /* snow-clock */ = {
 			isa = PBXGroup;
 			children = (
+				1C1D811928CAFFF500B68A09 /* GoogleService-Info.plist */,
 				1C0D907F275F59C100639CE8 /* snow_clockApp.swift */,
 				1C0D9081275F59C100639CE8 /* ContentView.swift */,
 				1C0D9083275F59C300639CE8 /* Assets.xcassets */,
@@ -143,6 +150,10 @@
 			dependencies = (
 			);
 			name = "snow-clock";
+			packageProductDependencies = (
+				1C1D811C28CB03C400B68A09 /* FirebaseAuth */,
+				1C1D811E28CB03C400B68A09 /* FirebaseFirestoreSwift */,
+			);
 			productName = "snow-clock";
 			productReference = 1C0D907C275F59C100639CE8 /* snow-clock.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 1C0D9073275F59C100639CE8;
+			packageReferences = (
+				1C1D811B28CB03C400B68A09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 1C0D907D275F59C100639CE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +247,7 @@
 			files = (
 				1C0D9087275F59C300639CE8 /* Preview Assets.xcassets in Resources */,
 				1C0D9084275F59C300639CE8 /* Assets.xcassets in Resources */,
+				1C1D811A28CAFFF500B68A09 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -401,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -605,6 +620,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C1D811B28CB03C400B68A09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C1D811C28CB03C400B68A09 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C1D811B28CB03C400B68A09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1C1D811E28CB03C400B68A09 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C1D811B28CB03C400B68A09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C0D9074275F59C100639CE8 /* Project object */;
 }

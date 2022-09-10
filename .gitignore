@@ -18,3 +18,14 @@ doxygenWarnings.txt
 *.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad
 */*.xcodeproj/xcuserdata/*.xcuserdatad
 */*.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
